@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Map Analysis</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="../index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="../index.html">Home</a></li>
+          <li class="dropdown"><a href="#"><span>Crime Analysis</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Map Analysis</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="index1.html">Crime-Type Analysis</a></li>
+                  <li><a href="index3.html">Age Based Analysis</a></li>
+                </ul>
+              </li>
+              <li><a href="../plots/plot1.html">Graphical Analysis</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="../backend/templates/input.html">Prediction Model</a></li>
+          <li><a class="nav-link" href="https://cid-criminal-prediction.streamlit.app/" target="_blank">Criminal Prediction</a></li>
+          <li><a class="nav-link" href="https://huggingface.co/spaces/Mayureshd/senti3" target="_blank">Sentiment Analysis</a></li>
+          <li><a class="nav-link" href="https://cid-resource-allocation.streamlit.app/" target="_blank">Resource Allocation</a></li>
+          <li><a class="nav-link" href="index2.html">Monthly Analysis</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+
+    </div>
+  </header><!-- End Header -->
+  <div id="map"></div>
+  <div class="crime-dropdown">
+    <select id="crime-select">
+      <option value="../assets/csv/ELECTION_data_loc_m_y.csv">Election</option>
+      <option value="../assets/csv/THEFT_data_loc_m_y.csv">Theft</option>
+      <option value="../assets/csv/RIOTS_data_loc_m_y.csv">Riots</option>
+      <option value="../assets/csv/EXPLOSIVES_data_loc_m_y.csv">Explosives</option>
+      <option value="../assets/csv/RAPE_data_loc_m_y.csv">Rape</option>
+      <option value="../assets/csv/CYBER CRIME_data_loc_m_y.csv">Cyber Crime</option>
+      <option value="../assets/csv/NARCOTIC DRUGS_data_loc_m_y.csv">Narcotic Drugs</option>
+    </select>
+  </div>
+  <!-- Template Main JS File -->
+  <script type="module" src="../assets/js/index5.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key={%your_api_key%}&callback=initMap&v=weekly" defer></script>
+
+</body>
+</html>

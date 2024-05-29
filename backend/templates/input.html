@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CrimeInsight</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="../../assets/img/favicon.png" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="../../index.html" class="logo"><img src="../../assets/img/logo.png" alt="" class="img-fluid"></a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="../../index.html">Home</a></li>
+          <li class="dropdown"><a href=""><span>Crime Analysis</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Map Analysis</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../../index1.html">Crime-Type Analysis</a></li>
+                  <li><a href="../../index3.html">Age Based Analysis</a></li>
+                </ul>
+              </li>
+              <li><a href="../../plot1.html">Graphical Analysis</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="backend/templates/input.html">Prediction Model</a></li>
+          <li><a class="nav-link" href="https://cid-criminal-prediction.streamlit.app/" target="_blank">Criminal Prediction</a></li>
+          <li><a class="nav-link scrollto" href="https://huggingface.co/spaces/Mayureshd/senti3" target="_blank">Sentiment Analysis</a></li>
+          <li><a class="nav-link" href="https://cid-resource-allocation.streamlit.app/" target="_blank">Resource Allocation</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <main id="main">
+    <!-- <form id="predictionForm">
+        <label for="month">Month (1-12): </label>
+        <input type="number" id="month" name="month" min="1" max="12" required><br>
+
+        <label for="day">Day: </label>
+        <input type="number" id="day" name="day" min="1" max="31" required><br>
+
+        <label for="category">Category: </label>
+        <input type="text" id="category" name="category" required><br>
+        <button type="button" onclick="predict()">Predict</button>
+    </form>
+    <div id="graphContainer"></div> -->
+
+    <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-6 bg-light">
+              <form id="predictionForm" class="mt-4">
+                  <div class="form-group">
+                      <label for="month">Month (1-12): </label>
+                      <input type="number" class="form-control" id="month" name="month" min="1" max="12" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="day">Day: </label>
+                      <input type="number" class="form-control" id="day" name="day" min="1" max="31" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="category">Category: </label>
+                      <input type="text" class="form-control" id="category" name="category" required>
+                  </div>
+                  <!-- Change the button type to "button" and add onclick event -->
+                  <button type="button" class="btn btn-primary" onclick="predict()">Predict</button>
+              </form>
+              <!-- Div to display the graph -->
+              <div id="graphContainer" class="mt-4"></div>
+          </div>
+      </div>
+  </div>
+  
+    <script>
+        function predict() {
+            var formData = new FormData(document.getElementById("predictionForm"));
+            fetch('http://127.0.0.1:5000/predict', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                console.log(response);
+                return response.text();
+            })
+            .then(data => {
+                // Parse the response data as HTML and extract the image source
+                var parser = new DOMParser();
+                var htmlDoc = parser.parseFromString(data, 'text/html');
+                console.log(data);
+                var imageUrl = htmlDoc.querySelector('img').src;
+
+                // Execute DOM manipulation within the main thread
+                window.requestAnimationFrame(function() {
+                    // Create an image element and set its source to the graph image URL
+                    var imgElement = document.createElement('img');
+                    imgElement.src = imageUrl;
+
+                    // Append the image element to the graph container
+                    document.getElementById("graphContainer").innerHTML = ''; // Clear previous content
+                    document.getElementById("graphContainer").appendChild(imgElement);
+                });
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+        }
+    </script>
+</body>
+</html>

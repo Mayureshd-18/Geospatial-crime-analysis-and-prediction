@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CrimeInsight</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="../public/index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li class="dropdown"><a href="#analysis"><span>Crime Analysis</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Map Analysis</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../public/index1.html">Crime-Type Analysis</a></li>
+                  <li><a href="../public/index3.html">Age Based Analysis</a></li>
+                </ul>
+              </li>
+              <li><a href="../plots/plot1.html">Graphical Analysis</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../backend/templates/input.html">Prediction Model</a></li>
+          <li><a class="nav-link" href="https://cid-criminal-prediction.streamlit.app/">Criminal Prediction</a></li>
+          <li><a class="nav-link scrollto" href="https://huggingface.co/spaces/Mayureshd/senti3" target="_blank">Sentiment Analysis</a></li>
+          <li><a class="nav-link scrollto" href="https://cid-resource-allocation.streamlit.app/" target="_blank">Resource Allocation</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <main id="main">
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+      <h1>CrimeInsight</h1>
+      <h2>A Dynamic Crime Prediction and Analysis Platform</h2>
+      <a href="#analysis" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </section>
+
+    <!-- ======= Analysis Section ======= -->
+    <section id="analysis" class="analysis">
+      <div class="container">
+
+        <div class="row border p-4 bg-light" style="border-radius: 20px">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+            <img src="../assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+            <h3 class="text-dark">Crime Analysis</h3>
+            <p class="fst-italic text-dark">
+              Crime analysis is a crucial component of law enforcement and community safety efforts, aiming to identify patterns, trends, and hotspots of criminal activity. By analyzing historical crime data, law enforcement agencies, urban planners, and policymakers can gain valuable insights into crime patterns and allocate resources effectively to prevent and address criminal activities. 
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Hotspot analysis identifies geographic areas with high concentrations of crime, enabling targeted policing strategies and resource allocation. </li>
+              <li><i class="bi bi-check-circle"></i>Spatial analysis examines the spatial distribution of crime to identify spatial patterns and trends, while temporal analysis explores patterns of crime over time, such as seasonal variations and daily trends. </li>
+              <li><i class="bi bi-check-circle"></i> Our age-based analysis places significant emphasis on children, women, and elderly individuals, given their heightened vulnerability to criminal activities. We meticulously examine various crimes and their geographical distribution across these demographic segments, culminating in the visualization of this data on Google Maps. This approach allows us to discern nuanced patterns and temporal trends, aiding in a comprehensive understanding of the dynamics at play.</li>
+              <li><i class="bi bi-check-circle"></i> Our analysis entails plotting the correlation between victims, age groups, and crime categories. This methodical approach allows us to visually represent the interrelation among these variables, providing insights into how different age demographics are affected by various types of crimes.</li>
+            </ul>
+            <p>
+              Together, these analytical approaches empower stakeholders to develop evidence-based strategies for crime prevention and community safety.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="predict" class="analysis">
+      <div class="container">
+        <div class="row border p-4 bg-light" style="border-radius: 20px">
+          <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
+            <img src="../assets/img/predict.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content" data-aos="fade-left">
+            <h3>Prediction Model</h3>
+            <p class="fst-italic">
+              Prediction models in crime analysis leverage statistical and machine learning techniques to forecast future crime trends and patterns based on historical data. These models analyze various factors, including crime types, locations, times, demographics, and environmental factors, to identify predictive patterns and trends. By analyzing historical crime data and other relevant datasets, prediction models can identify spatial and temporal patterns of criminal activity, enabling law enforcement agencies and policymakers to allocate resources effectively and implement targeted crime prevention strategies.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Our prediction regression model offers a powerful tool for anticipating crime rates on an hourly basis. By inputting a specific crime group and date, users can access a detailed plot that illustrates the probability of crimes occurring throughout the day.</li>
+              <li><i class="bi bi-check-circle"></i> Whether it's incidents of robbery, assault, or other offenses, our model utilizes advanced algorithms to analyze historical data and relevant factors such as time of day, location, and seasonal trends.</li>
+              <li><i class="bi bi-check-circle"></i> By inputting data such as location, time, and type of crime from a comprehensive dataset of previous criminal incidents, our pipeline accurately identifies patterns and trends. Through this analysis, we're able to predict the likelihood of a repeat offense by matching these inputs with historical criminal profiles.</li>
+            </ul>
+            <p>
+              With our prediction model, stakeholders can make informed decisions to enhance safety and security within their communities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="sentiment" class="analysis">
+      <div class="container">
+        <div class="row border p-4 bg-light" style="border-radius: 20px">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+            <img src="../assets/img/sentiment.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+            <h3>Sentiment Analysis</h3>
+            <p class="fst-italic">
+              Sentiment analysis, also known as opinion mining, is a natural language processing technique that aims to identify and extract sentiment or emotion from textual data. In the context of crime analysis, sentiment analysis can be applied to identify sentences or text passages with criminal intent, threats, or suspicious behavior.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> By analyzing the sentiment of text data, law enforcement agencies and security organizations can detect potentially harmful or criminal activities, enabling prompt intervention and response.</li>
+              <li><i class="bi bi-check-circle"></i> Sentiment analysis algorithms typically classify text into categories such as positive, negative, or neutral sentiment, using machine learning and deep learning techniques to analyze text patterns and semantic meaning.</li>
+              </li>
+            </ul>
+            <p>
+              In the context of crime analysis tools like CrimeInsight, sentiment analysis serves as a valuable tool for detecting and monitoring potential threats and suspicious activities, enhancing situational awareness and improving public safety.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="allocate" class="analysis">
+      <div class="container">
+
+        <div class="row border p-4 bg-light" style="border-radius: 20px">
+          <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
+            <img src="../assets/img/allocate.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content" data-aos="fade-left">
+            <h3>Resource Allocation</h3>
+            <p class="fst-italic">
+              In our project, we've incorporated a crucial feature focused on optimizing resource allocation in response to criminal incidents. Leveraging a dataset encompassing police station locations along with their respective capacities, we've developed a sophisticated algorithm that dynamically assesses the intensity of a crime based on its location and nature.When a crime is reported, our system intelligently evaluates its severity to determine the requisite resources needed for an effective response. This assessment considers various factors, including the type of crime, its location, and potential threats posed.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Once the intensity of the crime is gauged, our platform swiftly identifies the nearest police station equipped with the necessary capacity to handle the situation efficiently. By analyzing both proximity and available resources, we ensure that law enforcement personnel can respond promptly and effectively to incidents as they arise.</li>
+              <li><i class="bi bi-check-circle"></i> This approach not only enhances the efficiency of resource allocation but also maximizes the utilization of existing infrastructure, ensuring optimal coverage and support across different areas. </li>
+            </ul>
+            <p>
+              Ultimately, our aim is to empower law enforcement agencies with the tools and insights needed to effectively combat crime and ensure the safety and security of communities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+    
+        <div class="section-title">
+          <span>Team</span>
+          <h2>Team</h2>
+          <p>
+            Introducing our dedicated team for the Crime Insight project, committed to leveraging data analytics and innovative technologies to unravel patterns, enhance predictive capabilities, and contribute to safer communities.</p>
+        </div>
+    
+        <div class="row justify-content-around">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+            <div class="member">
+              <img src="../assets/img/team/team-1.jpg" alt="">
+              <h4>Arjun Tyagi</h4>
+              <p>
+                Driven by a fascination for artificial intelligence, seeking to understand and harness its transformative potential across various domains.
+              </p>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+            <div class="member">
+              <img src="../assets/img/team/team-2.png" alt="">
+              <h4>Mayuresh Dharwadkar</h4>
+              <p>
+                Eagerly delves into the world of JavaScript, crafting dynamic and interactive web experiences with creativity and passion.
+              </p>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+            <div class="member">
+              <img src="../assets/img/team/team-3.jpg" alt="">
+              <h4>Eshan Bandekar</h4>
+              <p>
+                Designs user-friendly interfaces and develops algorithms leveraging machine learning to create intelligent, data-driven applications.
+              </p>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+            <div class="member">
+              <img src="../assets/img/team/team-4.jpg" alt="">
+              <h4>Vedant Gupta</h4>
+              <p>
+                Passionately explores the realms of machine learning to unlock the potential of data-driven solutions.
+              </p>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+  </main>
+    <!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <!-- <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Contact</span>
+          <h2>Contact</h2>
+          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>A108 Adam Street, New York, NY 535022</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>contact@example.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>+1 5589 55488 55</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row" data-aos="fade-up">
+
+          <div class="col-lg-6 ">
+            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>End Contact Section -->
+
+  <!-- End #main -->
+
+  <!-- <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Day</h3>
+              <p>
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Day</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+    </div>
+  </footer> -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
