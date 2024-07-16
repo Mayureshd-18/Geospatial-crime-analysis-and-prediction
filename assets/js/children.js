@@ -1,8 +1,11 @@
+import * as constants from '../../constants.ts';
+
+
 let map;
-let locations = []; // Array to hold data from CSV file
-const markers = []; // Array to hold markers
-let markerCluster; // Variable to hold the MarkerClusterer instance
-let crimeFileName = "assets/csv/children.csv"; // Replace with your CSV file name
+let locations = [];
+const markers = []; 
+let markerCluster;
+let crimeFileName = constants.CHILDREN_CSV;
 
 document.getElementById('crime-select').addEventListener('change', function() {
   const selectedCrime = this.value;
@@ -33,17 +36,17 @@ function parseCSV(csvData) {
   const lines = csvData.split('\n');
   const result = [];
 
-  for (let i = 1; i < lines.length; i++) { // Start from index 1 to skip header
+  for (let i = 1; i < lines.length; i++) { 
     const line = lines[i].trim();
     if (line !== '') {
       const items = line.split(',');
       const year = parseInt(items[0], 10);
       const age = parseInt(items[1], 10);
-      const address = items.slice(2, -1).join(',').replace(/"/g, ''); // Extract address without crime group and remove double quotes
+      const address = items.slice(2, -1).join(',').replace(/"/g, ''); 
       const crime = items[items.length - 1];
 
-      if (!isNaN(year) && !isNaN(age) && age <18) { // Filter based on age
-        result.push({ age, crime, address }); // Push object with age, crime, and address into result array
+      if (!isNaN(year) && !isNaN(age) && age <18) { 
+        result.push({ age, crime, address }); 
 
         // Log age, crime, and location
         console.log(`Age: ${age}, Crime: ${crime}, Address: ${address}`);

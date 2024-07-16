@@ -1,8 +1,10 @@
+import * as constants from '../../constants.ts'
+
 let map;
 let locations = []; // Array to hold data from CSV file
 const markers = []; // Array to hold markers
 let markerCluster; // Variable to hold the MarkerClusterer instance
-let crimeFileName = "assets/csv/women.csv"; // Replace with your CSV file name
+let crimeFileName = constants.WOMEN_CSV // Replace with your CSV file name
 
 document.getElementById('crime-select').addEventListener('change', function() {
   const selectedCrime = this.value;

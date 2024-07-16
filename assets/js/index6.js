@@ -1,8 +1,10 @@
+import * as constants from '../../constants.ts'
+
 let map;
 let locations = []; // Array to hold data from CSV file
 const myLocations = []; // Declare myLocations as a global variable
 const markers = []; // Array to hold markers
-let crimeFileName = "assets/csv/ELECTION_data_loc_m_y.csv";
+let crimeFileName = constants.ELECTION_CSV;
 
 
 
